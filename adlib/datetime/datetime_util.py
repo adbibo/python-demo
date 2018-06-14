@@ -66,7 +66,7 @@ class TMUtil(object):
 
 if __name__ == "__main__":
     tm = TMUtil(datetime.now())
-    print tm.date_to_seconds()
-    print tm.get_next_week_first_day()
-    print tm.get_last_week_first_day()
-    print tm.get_week_range()
+    print(tm.date_to_seconds())
+    print(tm.get_next_week_first_day())
+    print(tm.get_last_week_first_day())
+    print(tm.get_week_range())

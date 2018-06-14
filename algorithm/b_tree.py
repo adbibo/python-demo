@@ -34,9 +34,9 @@ class KeyValue(object):
 class BtreeNode(object):
     def __init__(self, t, parent=None):
         if not isinstance(t, int):
-            raise InitError, 'degree of Btree must be int type'
+            raise(InitError, 'degree of Btree must be int type')
         if t < 2:
-            raise InitError, 'degree of Btree must be equal or greater then 2'
+            raise(InitError, 'degree of Btree must be equal or greater then 2')
         else:
             self.vlist = []
             self.clist = []
@@ -75,7 +75,7 @@ class BtreeNode(object):
             except IndexError:
                 return
             else:
-                print [v.key for v in w.vlist], 'the height is', hei
+                print([v.key for v in w.vlist], 'the height is', hei)
                 if w.clist == []:
                     continue
                 else:

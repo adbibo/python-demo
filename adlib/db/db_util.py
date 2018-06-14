@@ -16,7 +16,7 @@ def to_list_dict(result_set, field_list):
             for index, field in enumerate(field_list):
                 result_dict[field] = result[index]
             result_list.append(result_dict)
-    except Exception, e:
+    except Exception as e:
         raise e
     return result_list
 
@@ -42,7 +42,7 @@ def to_dict_with_key(result_set, field_list, key):
                 result_dict[key_value] = record_dict
             else:
                 raise "key field [%s] not unique" % key
-    except Exception, e:
+    except Exception as e:
         raise e
     return result_dict
 
@@ -71,7 +71,7 @@ def to_dict_with_keys(result_set, field_list, key_fields, split_mark='-'):
                 result_dict[key_value] = record_dict
             else:
                 raise ValueError("key fields [%s] not unique" % split_mark.join(key_fields))
-    except Exception, e:
+    except Exception as e:
         raise e
     return result_dict
 
@@ -85,7 +85,7 @@ def get_key_list(result_set, field_list, key):
                 raise ValueError("width of record not equal key fields")
             index = field_list.index(key)
             key_list.append(result[index])
-    except Exception, e:
+    except Exception as e:
         raise e
     return key_list
 
@@ -100,7 +100,7 @@ def get_key_record(result_set, field_list, key, key_list):
             key_value = result[field_list.index(key)]
             if key_value in key_list:
                 result_list.append(result)
-    except Exception, e:
+    except Exception as e:
         raise e
     return result_list
 
@@ -110,6 +110,6 @@ def print_result_set(result_set, split_mark="-"):
     try:
         if result_set is None or len(result_set) == 0:
             raise ValueError("result set is NULL.")
-        print '\n'.join([split_mark.join(t_record) for t_record in result_set])
-    except Exception, e:
+        print('\n'.join([split_mark.join(t_record) for t_record in result_set]))
+    except Exception as e:
         raise e

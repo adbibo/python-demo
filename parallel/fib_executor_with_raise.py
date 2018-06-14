@@ -22,11 +22,11 @@ with ThreadPoolExecutor(max_workers=3) as executor:
         try:
             result = future.result()
         except Exception as e:
-            print 'raise an exception: {}'.format(e)
+            print('raise an exception: {}'.format(e))
         else:
-            print 'fib({}) = {}'.format(num, result)
+            print('fib({}) = {}'.format(num, result))
 
 
 with ThreadPoolExecutor(max_workers=3) as executor:
     for num, result in zip(NUMBERS, executor.map(fib, NUMBERS)):
-        print 'fib({}} = {}'.format(num, result)
+        print('fib({}} = {}'.format(num, result))

@@ -48,6 +48,6 @@ def create_excel(result_list, field_list, sheet_name, first_row, tmp_dir):
         excel_stream = write_excel(result_list, field_list, sheet_name=sheet_name, first_row=first_row)
         excel_path = '%s/%s.xls' % (tmp_dir, sheet_name)
         excel_stream.save(excel_path)
-    except Exception, e:
+    except Exception as e:
         raise e
     return '%s.xls' % sheet_name
