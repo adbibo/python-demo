@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-#-*- coding=utf-8 -*-
+# -*- coding=utf-8 -*-
+
 
 class Dict(dict):
-
     def __init__(self, **kw):
         super(Dict, self).__init__(**kw)
 

@@ -15,6 +15,6 @@ channel.basic_publish(exchange='',
                       routing_key='hello',
                       body='Hello World!')
 
-print 'starting queue'
+print('starting queue')
 
 connection.close()
