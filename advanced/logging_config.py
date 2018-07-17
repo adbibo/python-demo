@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # -*- coding=utf-8 -*-
 
-"""
- @author 
- @create 2017-03-16 下午11:42
-"""
+# @author: adbibo
+# @contact: laoliu.yin@gmail.com
+# @file: logging_config.py
+# @time: 2018/7/17 下午4:09
+# @desc: 日志配置信息
+
 import logging
 
 logging.basicConfig(filename='log.log',

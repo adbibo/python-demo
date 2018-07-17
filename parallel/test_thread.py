@@ -15,9 +15,9 @@ class MyThread(threading.Thread):  # 继承父类threading.Thread
         self.counter = counter
 
     def run(self):  # 把要执行的代码写到run函数里面 线程在创建后会直接运行run函数
-        print "Starting " + self.name
+        print("Starting " + self.name)
         print_time(self.name, self.counter, 5)
-        print "Exiting " + self.name
+        print("Exiting " + self.name)
 
 
 def print_time(thread_name, delay, counter):
@@ -25,8 +25,9 @@ def print_time(thread_name, delay, counter):
         if exitFlag:
             MyThread.exit()
         time.sleep(delay)
-        print "%s: %s" % (thread_name, time.ctime(time.time()))
+        print("%s: %s" % (thread_name, time.ctime(time.time())))
         counter -= 1
+
 
 if __name__ == '__main__':
     # 创建新线程
@@ -40,4 +41,4 @@ if __name__ == '__main__':
     thread1.join()
     thread2.join()
 
-    print "Exiting Main Thread"
+    print("Exiting Main Thread")

@@ -8,7 +8,7 @@ def hello_world():
     r = redis.Redis('127.0.0.1', port=6379)
     r.set('name', 'hello world!')
 
-    print r.get('name')
+    print(r.get('name'))
 
 
 def redis_connect_pool():

@@ -1,10 +1,17 @@
 #!/usr/bin/env python
 # -*- coding=utf-8 -*-
 
+# @author: adbibo
+# @contact: laoliu.yin@gmail.com
+# @file: block_chain.py
+# @time: 2018/7/17 下午4:09
+# @desc: 区块链示例
+
 import datetime as date
 import hashlib as hasher
 
 
+# 构造一个block结构 得到一个哈希值
 class Block:
     def __init__(self, index, timestamp, data, previous_hash):
         self.index = index

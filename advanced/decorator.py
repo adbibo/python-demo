@@ -1,9 +1,16 @@
 #!/usr/bin/env python
 # -*- coding=utf-8 -*-
 
-import time
+# @author: adbibo
+# @contact: laoliu.yin@gmail.com
+# @file: decorator.py
+# @time: 2018/7/17 下午4:09
+# @desc: 装饰器
+# @url: http://python.jobbole.com/81683/
 
-class Decorator(object):
+
+# 定义一个装饰器
+class decorator(object):
     def __init__(self, f):
         print("inside decorator.__init__()")
         f()  # Prove that function definition has completed
@@ -12,8 +19,8 @@ class Decorator(object):
         print("inside decorator.__call__()")
 
 
-@Decorator
-def function():
+@decorator
+def test_function():
     print("inside function()")
 
 
@@ -21,20 +28,3 @@ if __name__ == '__main__':
     print("Finished decorating function()")
 
 
-def myfunc():
-    print("start my func")
-    time.sleep(0.6)
-    print("end my func")
-
-
-def addfunc(a, b):
-    print("start add func")
-    print("result is %d" % (a + b))
-    print("end add func")
-
-
-if __name__ == "__main__":
-    print("my func is: ", myfunc.__name__)
-    myfunc()
-    print("my func is: ", addfunc.__name__)
-    addfunc(1, 2)

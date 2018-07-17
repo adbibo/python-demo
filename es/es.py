@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-# @author: yinhaochuan
-# @contact: yinhaochuan@100tal.com
+# @author: adbibo
+# @contact: laoliu.yin@gmail.com
 # @file: es.py
 # @time: 2018/7/17 下午4:09
 # @desc:
@@ -26,7 +26,7 @@ class ElasticObj:
         # 无用户名密码状态
         # self.es = Elasticsearch([ip])
         # 用户名密码状态
-        self.es = Elasticsearch([ip], http_auth=('elastic', 'Reina1103@'), port=9200)
+        self.es = Elasticsearch([ip], http_auth=('elastic', 'password'), port=9200)
 
     def create_index(self):
         """

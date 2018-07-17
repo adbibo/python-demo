@@ -17,6 +17,6 @@ start = time.time()
 
 with ProcessPoolExecutor(max_workers=3) as executor:
     for num, result in zip(NUMBERS, executor.map(fib, NUMBERS)):
-        print 'fib({}) = {}'.format(num, result)
+        print('fib({}) = {}'.format(num, result))
 
-print 'COST: {}'.format(time.time() - start)
+print('COST: {}'.format(time.time() - start))

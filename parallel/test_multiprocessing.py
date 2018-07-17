@@ -29,7 +29,7 @@ def main():
     pw1.start()
     pw2.start()
 
-    for c in [chr(ord('A') + i) for i in xrange(26)]:
+    for c in [chr(ord('A') + i) for i in range(26)]:
         q.put(c)
     try:
         q.join()

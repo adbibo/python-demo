@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-# @author: yinhaochuan
-# @contact: yinhaochuan@100tal.com
+# @author: adbibo
+# @contact: laoliu.yin@gmail.com
 # @file: properties.py
 # @time: 2018/7/5 下午2:10
 # @desc:
