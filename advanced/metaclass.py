@@ -7,5 +7,5 @@ class Demo(object):
 
 obj = Demo()
 
-print "Class of obj is {0}".format(obj.__class__)
-print "Class of obj is {0}".format(Demo.__class__)
+print("Class of obj is {0}".format(obj.__class__))
+print("Class of obj is {0}".format(Demo.__class__))

@@ -2,7 +2,7 @@
 # -*- coding=utf-8 -*-
 
 import datetime as date
-import hashlib as hasher
+import hashlib as hash_func
 
 
 class Block:
@@ -14,7 +14,7 @@ class Block:
         self.hash = self.hash_block()
 
     def hash_block(self):
-        sha = hasher.sha256()
+        sha = hash_func.sha256()
         data = (str(self.index) + str(self.timestamp) + str(self.data) + str(self.previous_hash)).encode("utf8")
         sha.update(data)
         return sha.hexdigest()
@@ -32,14 +32,14 @@ def next_block(last_block):
     return Block(this_index, this_timestamp, this_data, this_hash)
 
 
-blockchain = [create_genesis_block()]
-previous_block = blockchain[0]
+block_chain = [create_genesis_block()]
+previous_block = block_chain[0]
 
 num_of_blocks_to_add = 20
 
 for i in range(0, num_of_blocks_to_add):
     block_to_add = next_block(previous_block)
-    blockchain.append(block_to_add)
+    block_chain.append(block_to_add)
     previous_block = block_to_add
 
     print("Block #{} has been added to the block chain!".format(block_to_add.index))
