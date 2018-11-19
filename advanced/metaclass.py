@@ -2,8 +2,10 @@
 # -*- coding=utf-8 -*-
 
 
+# 类定义
 class Demo(object):
     pass
+
 
 obj = Demo()
 

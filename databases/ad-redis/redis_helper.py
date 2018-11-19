@@ -2,7 +2,6 @@
 # -*- coding=utf-8 -*-
 import redis
 
-
 class RedisHelper:
     def __init__(self, host='127.0.0.1'):
         self.__conn = redis.Redis(host=host)

@@ -16,18 +16,18 @@ class MyThread(threading.Thread):
         self.q = q
 
     def run(self):
-        print "Starting " + self.name
+        print("Starting " + self.name)
         process_data(self.name, self.q)
-        print "Exiting " + self.name
+        print("Exiting " + self.name)
 
 
-def process_data(threadName, q):
+def process_data(thread_name, q):
     while not exitFlag:
         queue_lock.acquire()
         if not work_queue.empty():
             data = q.get()
             queue_lock.release()
-            print "%s processing %s" % (threadName, data)
+            print("%s processing %s" % (thread_name, data))
         else:
             queue_lock.release()
         time.sleep(1)
@@ -64,4 +64,4 @@ if __name__ == '__main__':
     # 等待所有线程完成
     for t in threads:
         t.join()
-    print "Exiting Main Thread"
+    print("Exiting Main Thread")
